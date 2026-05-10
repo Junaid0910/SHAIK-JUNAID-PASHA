@@ -86,7 +86,7 @@ export function setCharTimeline(
           0
         )
         .to(character.rotation, { y: 0.92, x: 0.12, delay: 3, duration: 3 }, 0)
-        .to(neckBone!.rotation, { x: 0.6, delay: 2, duration: 3 }, 0)
+        .to(neckBone?.rotation || {}, { x: 0.6, delay: 2, duration: 3 }, 0)
         .to(monitor.material, { opacity: 1, duration: 0.8, delay: 3.2 }, 0)
         .to(screenLight.material, { opacity: 1, duration: 0.8, delay: 4.5 }, 0)
         .fromTo(
@@ -122,9 +122,10 @@ export function setCharTimeline(
     if (character) {
       const tM2 = gsap.timeline({
         scrollTrigger: {
-          trigger: ".what-box-in",
+          trigger: ".whatIDO",
           start: "top 70%",
           end: "bottom top",
+          toggleActions: "play none none reverse",
         },
       });
       tM2.to(".what-box-in", { display: "flex", duration: 0.1, delay: 0 }, 0);

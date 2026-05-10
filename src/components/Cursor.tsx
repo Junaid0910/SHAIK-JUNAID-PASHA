@@ -6,6 +6,8 @@ const Cursor = () => {
   const cursorRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     let hover = false;
+    const isTouch = window.matchMedia("(pointer: coarse)").matches;
+    if (isTouch) return;
     const cursor = cursorRef.current!;
     const mousePos = { x: 0, y: 0 };
     const cursorPos = { x: 0, y: 0 };
@@ -48,6 +50,8 @@ const Cursor = () => {
     });
   }, []);
 
+  const isTouch = typeof window !== "undefined" && window.matchMedia("(pointer: coarse)").matches;
+  if (isTouch) return null;
   return <div className="cursor-main" ref={cursorRef}></div>;
 };
 
