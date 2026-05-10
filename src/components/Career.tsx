@@ -15,43 +15,38 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Position In Company</h4>
-                <h5>Company Name</h5>
+                <h4>B.Tech – Computer Science (Data Science)</h4>
+                <h5>CMR College of Engineering & Technology</h5>
               </div>
-              <h3>20XX</h3>
+              <h3>2023 - 2027</h3>
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-              labore sit non ipsum temporibus quidem, deserunt eaque officiis
-              mollitia ratione suscipit repellat.
+              Undergraduate studies focusing on Data Science, Python, SQL, and analytical thinking.
+              Previously completed Intermediate at TMRJC Boys-1 (96.5%) and Secondary School at Sri Saraswathi EM High School (10 GPA).
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Position In Company</h4>
-                <h5>Company Name</h5>
+                <h4>Artificial Intelligence Intern</h4>
+                <h5>Edunet Foundation</h5>
               </div>
-              <h3>20XX</h3>
+              <h3>2023</h3>
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-              labore sit non ipsum temporibus quidem, deserunt eaque officiis
-              mollitia ratione suscipit repellat.
+              Gained exposure to Artificial Intelligence fundamentals and real-world applications. Worked on analytical thinking, logic building, and problem-solving exercises.
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Position In Company</h4>
-                <h5>Company Name</h5>
+                <h4>Founder & Freelance Developer</h4>
+                <h5>JUNODO online store & Fiverr</h5>
               </div>
               <h3>NOW</h3>
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-              labore sit non ipsum temporibus quidem, deserunt eaque officiis
-              mollitia ratione suscipit repellat.
+              Founder of JUNODO online store and started a print-on-demand fashion brand: JUNODO-FASHIONS. Working as a freelance developer on Fiverr, delivering web-based and technical solutions.
             </p>
           </div>
         </div>

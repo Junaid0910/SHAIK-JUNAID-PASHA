@@ -53,19 +53,40 @@ const Work = () => {
           My <span>Work</span>
         </h2>
         <div className="work-flex">
-          {[...Array(6)].map((_value, index) => (
+          {[
+            {
+              name: "Shopping Trends Data Analysis",
+              category: "Data Analysis",
+              tools: "Python, Pandas, NumPy",
+            },
+            {
+              name: "Sales Performance Dashboard",
+              category: "Data Visualization",
+              tools: "Power BI, Excel, Power Query",
+            },
+            {
+              name: "Voice-to-Text Web Application",
+              category: "Web App",
+              tools: "Speech Input, Document Gen",
+            },
+            {
+              name: "Video Call Application with Photo Capture",
+              category: "Real-time App",
+              tools: "React, Node.js, WebRTC",
+            },
+          ].map((project, index) => (
             <div className="work-box" key={index}>
               <div className="work-info">
                 <div className="work-title">
                   <h3>0{index + 1}</h3>
 
                   <div>
-                    <h4>Project Name</h4>
-                    <p>Category</p>
+                    <h4>{project.name}</h4>
+                    <p>{project.category}</p>
                   </div>
                 </div>
                 <h4>Tools and features</h4>
-                <p>Javascript, TypeScript, React, Threejs</p>
+                <p>{project.tools}</p>
               </div>
               <WorkImage image="/images/placeholder.webp" alt="" />
             </div>

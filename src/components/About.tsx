@@ -6,9 +6,7 @@ const About = () => {
       <div className="about-me">
         <h3 className="title">About Me</h3>
         <p className="para">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-          dolores numquam iusto Ratione earum ducimus autem id iure pariatur
-          dolorum quae maiores.
+          Motivated Computer Science (Data Science) undergraduate seeking an internship or entry-level Data Analytics role to apply skills in data analysis, visualization, SQL, and Python for transforming data into actionable insights and supporting data-driven decision making.
         </p>
       </div>
     </div>
