@@ -160,10 +160,10 @@
 }
 @media only screen and (max-width: 1025px) {
   .career-section {
-    padding: 70px 0px;
-    padding-top: 220px;
-    margin-top: -200px;
-    margin-bottom: 0;
+    padding: 60px 0px;
+    padding-top: 100px;
+    margin-top: -50px;
+    margin-bottom: 50px;
   }
 }
 @media only screen and (max-width: 900px) {
@@ -206,9 +206,9 @@
     padding-left: 5%;
   }
   .career-section {
-    padding-top: 90px;
-    margin-top: -70px;
-
+    padding-top: 60px;
+    margin-top: 0;
+    margin-bottom: 40px;
     align-items: start;
     place-items: inherit;
     justify-content: left;
