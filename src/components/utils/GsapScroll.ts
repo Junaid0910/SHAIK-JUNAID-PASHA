@@ -1,5 +1,8 @@
 import * as THREE from "three";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+ 
+gsap.registerPlugin(ScrollTrigger);
 
 export function setCharTimeline(
   character: THREE.Object3D<THREE.Object3DEventMap> | null,
@@ -16,6 +19,7 @@ export function setCharTimeline(
       end: "bottom top",
       scrub: true,
       invalidateOnRefresh: true,
+      anticipatePin: 1,
     },
   });
   const tl2 = gsap.timeline({
@@ -25,6 +29,7 @@ export function setCharTimeline(
       end: "bottom top",
       scrub: true,
       invalidateOnRefresh: true,
+      anticipatePin: 1,
     },
   });
   const tl3 = gsap.timeline({
@@ -34,6 +39,7 @@ export function setCharTimeline(
       end: "bottom top",
       scrub: true,
       invalidateOnRefresh: true,
+      anticipatePin: 1,
     },
   });
   let screenLight: any, monitor: any;
@@ -126,6 +132,8 @@ export function setCharTimeline(
           start: "top 70%",
           end: "bottom top",
           toggleActions: "play none none reverse",
+          invalidateOnRefresh: true,
+      anticipatePin: 1,
         },
       });
       tM2.to(".what-box-in", { display: "flex", duration: 0.1, delay: 0 }, 0);
@@ -141,6 +149,7 @@ export function setAllTimeline() {
       end: "100% center",
       scrub: true,
       invalidateOnRefresh: true,
+      anticipatePin: 1,
     },
   });
   careerTimeline
