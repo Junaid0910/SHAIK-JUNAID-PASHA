@@ -24,7 +24,7 @@ const Contact = () => {
           <div className="contact-box">
             <h4>Social</h4>
             <a
-              href="https://github.com/Junaid0910"
+              href="https://github.com"
               target="_blank"
               data-cursor="disable"
               className="contact-social"
@@ -32,7 +32,7 @@ const Contact = () => {
               Github <MdArrowOutward />
             </a>
             <a
-              href="https://www.linkedin.com/in/shaik-junaid-pasha"
+              href="https://www.linkedin.com"
               target="_blank"
               data-cursor="disable"
               className="contact-social"
@@ -40,7 +40,15 @@ const Contact = () => {
               Linkedin <MdArrowOutward />
             </a>
             <a
-              href="https://www.instagram.com/neurotic_zx_/"
+              href="https://x.com"
+              target="_blank"
+              data-cursor="disable"
+              className="contact-social"
+            >
+              Twitter <MdArrowOutward />
+            </a>
+            <a
+              href="https://www.instagram.com"
               target="_blank"
               data-cursor="disable"
               className="contact-social"
@@ -53,7 +61,7 @@ const Contact = () => {
               Designed and Developed <br /> by <span>Shaik Junaid Pasha</span>
             </h2>
             <h5>
-              <MdCopyright /> 2026
+              <MdCopyright /> 2024
             </h5>
           </div>
         </div>

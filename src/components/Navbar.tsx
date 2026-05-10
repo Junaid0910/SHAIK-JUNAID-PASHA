@@ -54,6 +54,11 @@ const Navbar = () => {
         </a>
         <ul>
           <li>
+            <a href="/images/SHAIK JUNAID RESUME SD.pdf" target="_blank" data-cursor="disable">
+              <HoverLinks text="RESUME" />
+            </a>
+          </li>
+          <li>
             <a data-href="#about" href="#about">
               <HoverLinks text="ABOUT" />
             </a>
