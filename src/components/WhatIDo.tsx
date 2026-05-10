@@ -90,7 +90,7 @@ const WhatIDo = () => {
               <h3>DATA & DEVELOPMENT</h3>
               <h4>Description</h4>
               <p>
-                Transforming data into actionable insights and building web applications.
+                Working as a Software Developer and Data Analyst to transform data into actionable insights and build scalable web applications.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
