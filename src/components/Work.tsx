@@ -37,7 +37,7 @@ const Work = () => {
         trigger: ".work-section",
         start: "top top",
         end: () => `+=${translateX}`,
-        scrub: true,
+        scrub: 1,
         pin: true,
         id: "work",
         invalidateOnRefresh: true,
