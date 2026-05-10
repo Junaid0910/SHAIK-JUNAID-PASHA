@@ -198,4 +198,6 @@ export function setAllTimeline() {
       0
     );
   }
+  
+  ScrollTrigger.refresh();
 }
