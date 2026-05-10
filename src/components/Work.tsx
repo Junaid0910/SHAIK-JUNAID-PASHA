@@ -58,21 +58,19 @@ const Work = () => {
               name: "Shopping Trends Data Analysis",
               category: "Data Analysis",
               tools: "Python, Pandas, NumPy",
+              image: "/images/shopping trends data analysis.jfif",
             },
             {
               name: "Sales Performance Dashboard",
               category: "Data Visualization",
               tools: "Power BI, Excel, Power Query",
+              image: "/images/amazon sales.PNG",
             },
             {
               name: "Voice-to-Text Web Application",
               category: "Web App",
               tools: "Speech Input, Document Gen",
-            },
-            {
-              name: "Video Call Application with Photo Capture",
-              category: "Real-time App",
-              tools: "React, Node.js, WebRTC",
+              image: "/images/voice2text.PNG",
             },
           ].map((project, index) => (
             <div className="work-box" key={index}>
@@ -88,7 +86,7 @@ const Work = () => {
                 <h4>Tools and features</h4>
                 <p>{project.tools}</p>
               </div>
-              <WorkImage image="/images/placeholder.webp" alt="" />
+              <WorkImage image={project.image} alt={project.name} />
             </div>
           ))}
         </div>
