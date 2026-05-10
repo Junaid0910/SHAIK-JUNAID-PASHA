@@ -87,7 +87,7 @@ const WhatIDo = () => {
             <div className="what-corner"></div>
 
             <div className="what-content-in">
-              <h3>DATA & DEVELOPMENT</h3>
+              <h3>SOFTWARE DEVELOPMENT</h3>
               <h4>Description</h4>
               <p>
                 Working as a Software Developer and Data Analyst to transform data into actionable insights and build scalable web applications.
@@ -126,7 +126,7 @@ const WhatIDo = () => {
             </div>
             <div className="what-corner"></div>
             <div className="what-content-in">
-              <h3>VISUALIZATION & BUSINESS</h3>
+              <h3>DATA VISUALIZATION</h3>
               <h4>Description</h4>
               <p>
                 Creating dynamic dashboards and managing online businesses.
