@@ -4,48 +4,58 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 
-gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const Work = () => {
   useGSAP(() => {
-  let translateX: number = 0;
+    let translateX: number = 0;
 
-  function setTranslateX() {
-    const box = document.getElementsByClassName("work-box");
-    const rectLeft = document
-      .querySelector(".work-container")!
-      .getBoundingClientRect().left;
-    const rect = box[0].getBoundingClientRect();
-    const parentWidth = box[0].parentElement!.getBoundingClientRect().width;
-    let padding: number =
-      parseInt(window.getComputedStyle(box[0]).padding) / 2;
-    translateX = rect.width * box.length - (rectLeft + parentWidth) + padding;
-  }
+    function setTranslateX() {
+      const boxes = document.getElementsByClassName("work-box");
+      if (boxes.length === 0) return;
+      const container = document.querySelector(".work-container");
+      if (!container) return;
 
-  setTranslateX();
+      const rectLeft = container.getBoundingClientRect().left;
+      const rect = boxes[0].getBoundingClientRect();
+      const parentWidth = boxes[0].parentElement!.getBoundingClientRect().width;
+      let padding: number =
+        parseInt(window.getComputedStyle(boxes[0]).padding) / 2;
+      translateX = rect.width * boxes.length - (rectLeft + parentWidth) + padding;
+    }
 
-  let timeline = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".work-section",
-      start: "top top",
-      end: `+=${translateX}`, // Use actual scroll width
-      scrub: true,
-      pin: true,
-      id: "work",
-    },
-  });
+    const refreshAll = () => {
+      setTranslateX();
+      ScrollTrigger.refresh();
+    };
 
-  timeline.to(".work-flex", {
-    x: -translateX,
-    ease: "none",
-  });
+    refreshAll();
+    window.addEventListener("resize", refreshAll);
 
-  // Clean up (optional, good practice)
-  return () => {
-    timeline.kill();
-    ScrollTrigger.getById("work")?.kill();
-  };
-}, []);
+    let timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".work-section",
+        start: "top top",
+        end: () => `+=${translateX}`,
+        scrub: true,
+        pin: true,
+        id: "work",
+        invalidateOnRefresh: true,
+        anticipatePin: 1,
+      },
+    });
+
+    timeline.to(".work-flex", {
+      x: () => -translateX,
+      ease: "none",
+    });
+
+    return () => {
+      window.removeEventListener("resize", refreshAll);
+      timeline.kill();
+      ScrollTrigger.getById("work")?.kill();
+    };
+  }, []);
   return (
     <div className="work-section" id="work">
       <div className="work-container section-container">
