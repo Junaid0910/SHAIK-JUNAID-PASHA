@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shaik-junaid-pasha.vercel.app/sitemap.xml
