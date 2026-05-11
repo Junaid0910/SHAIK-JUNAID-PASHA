@@ -24,7 +24,12 @@ const TechStack = () => {
       <h2>My Techstack & Skills</h2>
       <div className="tech-grid">
         {skills.map((skill, index) => (
-          <div className="tech-box" key={index} data-cursor="disable">
+          <div
+            className="tech-box"
+            key={index}
+            data-cursor="disable"
+            style={{ "--delay": index } as React.CSSProperties}
+          >
             {skill.icon !== "/images/placeholder.webp" ? (
               <img src={skill.icon} alt={skill.name} />
             ) : (
