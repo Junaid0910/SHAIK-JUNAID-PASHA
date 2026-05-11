@@ -36,7 +36,17 @@ const WorkImage = (props: Props) => {
             <MdArrowOutward />
           </div>
         )}
-        <img src={props.image} alt={props.alt} />
+        <img
+          src={props.image}
+          alt={props.alt}
+          loading="lazy"
+          style={{
+            aspectRatio: "16 / 10",
+            width: "100%",
+            height: "auto",
+            backgroundColor: "#1a1a1a",
+          }}
+        />
         {isVideo && <video src={video} autoPlay muted playsInline loop></video>}
       </a>
     </div>
