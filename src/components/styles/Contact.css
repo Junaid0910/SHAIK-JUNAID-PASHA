@@ -28,7 +28,23 @@
 }
 a.contact-social {
   font-size: 25px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #363636;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  transition: 0.3s;
+}
+a.contact-social:hover {
+  color: var(--accentColor);
+  border-color: var(--accentColor);
+}
+.social-icon {
+  display: none;
+}
+.contact-social-flex {
+  display: flex;
+  flex-direction: column;
 }
 .contact-box h2 {
   font-weight: 400;
@@ -88,5 +104,21 @@ a.contact-social {
   }
   .contact-container {
     width: calc(100% - 25px);
+  }
+  .contact-social-flex {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .social-text, .social-arrow {
+    display: none;
+  }
+  .social-icon {
+    display: block;
+    font-size: 30px;
+  }
+  a.contact-social {
+    border-bottom: none;
+    padding: 0;
   }
 }

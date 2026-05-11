@@ -1,4 +1,6 @@
 import { MdArrowOutward, MdCopyright } from "react-icons/md";
+import { FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa6";
+import { SiLeetcode, SiFiverr } from "react-icons/si";
 import "./styles/Contact.css";
 
 const Contact = () => {
@@ -23,30 +25,58 @@ const Contact = () => {
           </div>
           <div className="contact-box">
             <h4>Social</h4>
-            <a
-              href="https://github.com/Junaid0910"
-              target="_blank"
-              data-cursor="disable"
-              className="contact-social"
-            >
-              Github <MdArrowOutward />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/shaik-junaid-pasha"
-              target="_blank"
-              data-cursor="disable"
-              className="contact-social"
-            >
-              Linkedin <MdArrowOutward />
-            </a>
-            <a
-              href="https://www.instagram.com/neurotic_zx_/"
-              target="_blank"
-              data-cursor="disable"
-              className="contact-social"
-            >
-              Instagram <MdArrowOutward />
-            </a>
+            <div className="contact-social-flex">
+              <a
+                href="https://github.com/Junaid0910"
+                target="_blank"
+                data-cursor="disable"
+                className="contact-social"
+              >
+                <FaGithub className="social-icon" />
+                <span className="social-text">Github</span>
+                <MdArrowOutward className="social-arrow" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/shaik-junaid-pasha"
+                target="_blank"
+                data-cursor="disable"
+                className="contact-social"
+              >
+                <FaLinkedinIn className="social-icon" />
+                <span className="social-text">Linkedin</span>
+                <MdArrowOutward className="social-arrow" />
+              </a>
+              <a
+                href="https://leetcode.com/u/junaid0910/"
+                target="_blank"
+                data-cursor="disable"
+                className="contact-social"
+              >
+                <SiLeetcode className="social-icon" />
+                <span className="social-text">LeetCode</span>
+                <MdArrowOutward className="social-arrow" />
+              </a>
+              <a
+                href="https://www.fiverr.com/s/6YkyzxR"
+                target="_blank"
+                data-cursor="disable"
+                className="contact-social"
+              >
+                <SiFiverr className="social-icon" />
+                <span className="social-text">Fiverr</span>
+                <MdArrowOutward className="social-arrow" />
+              </a>
+              <a
+                href="https://www.instagram.com/neurotic_zx_/"
+                target="_blank"
+                data-cursor="disable"
+                className="contact-social"
+              >
+                <FaInstagram className="social-icon" />
+                <span className="social-text">Instagram</span>
+                <MdArrowOutward className="social-arrow" />
+              </a>
+            </div>
           </div>
           <div className="contact-box">
             <h2>
