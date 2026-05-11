@@ -70,25 +70,28 @@ const Work = () => {
               category: "Data Analysis",
               tools: "Python, Pandas, NumPy",
               image: "/images/shopping trends data analysis.jfif",
+              link: "https://github.com/Junaid0910/shopping-trend-analysis",
             },
             {
               name: "Sales Performance Dashboard",
               category: "Data Visualization",
               tools: "Power BI, Excel, Power Query",
               image: "/images/amazon sales.PNG",
+              link: "https://github.com/Junaid0910/Amazon-Sales-analysis-Dashboard",
             },
             {
               name: "Voice-to-Text Web Application",
               category: "Web App",
               tools: "Speech Input, Document Gen",
               image: "/images/voice2text.PNG",
+              link: "https://voice2textdoc.vercel.app/",
             },
           ].map((project, index) => (
             <div className="work-box" key={index}>
               <div className="work-info">
                 <div className="work-title">
                   <h3>0{index + 1}</h3>
-
+ 
                   <div>
                     <h4>{project.name}</h4>
                     <p>{project.category}</p>
@@ -97,7 +100,11 @@ const Work = () => {
                 <h4>Tools and features</h4>
                 <p>{project.tools}</p>
               </div>
-              <WorkImage image={project.image} alt={project.name} />
+              <WorkImage
+                image={project.image}
+                alt={project.name}
+                link={project.link}
+              />
             </div>
           ))}
         </div>

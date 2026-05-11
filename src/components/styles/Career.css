@@ -218,3 +218,21 @@
     margin-bottom: 40px;
   }
 }
+
+.career-role a,
+.career-info-box a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.career-role a:hover,
+.career-info-box a:hover {
+  color: var(--accentColor);
+}
+
+.career-role a h4 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

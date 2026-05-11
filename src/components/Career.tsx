@@ -1,3 +1,4 @@
+import { MdArrowOutward } from "react-icons/md";
 import "./styles/Career.css";
 
 const Career = () => {
@@ -28,7 +29,15 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Artificial Intelligence Intern</h4>
+                <a
+                  href="https://drive.google.com/file/d/1MiQpfnKNysLvsd-gq5NiC4abEbbsBx3n/view?usp=drivesdk"
+                  target="_blank"
+                  data-cursor="disable"
+                >
+                  <h4>
+                    Artificial Intelligence Intern <MdArrowOutward />
+                  </h4>
+                </a>
                 <h5>Edunet Foundation</h5>
               </div>
               <h3>2023</h3>
@@ -41,7 +50,23 @@ const Career = () => {
             <div className="career-info-in">
               <div className="career-role">
                 <h4>Founder & Freelance Developer</h4>
-                <h5>JUNODO online store & Fiverr</h5>
+                <h5>
+                  <a
+                    href="https://www.smartbiz.in/JUNODO"
+                    target="_blank"
+                    data-cursor="disable"
+                  >
+                    JUNODO online store
+                  </a>{" "}
+                  &{" "}
+                  <a
+                    href="https://www.fiverr.com/s/6YkyzxR"
+                    target="_blank"
+                    data-cursor="disable"
+                  >
+                    Fiverr
+                  </a>
+                </h5>
               </div>
               <h3>NOW</h3>
             </div>
