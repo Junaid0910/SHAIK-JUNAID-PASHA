@@ -37,7 +37,7 @@ const Work = () => {
         trigger: ".work-section",
         start: "top top",
         end: () => `+=${translateX}`,
-        scrub: 1,
+        scrub: 0.5,
         pin: true,
         id: "work",
         invalidateOnRefresh: true,
@@ -48,6 +48,7 @@ const Work = () => {
     timeline.to(".work-flex", {
       x: () => -translateX,
       ease: "none",
+      force3D: true,
     });
 
     return () => {

@@ -26,6 +26,7 @@
   margin-left: -80px;
   padding-right: 120px;
   position: relative;
+  will-change: transform;
 }
 .work-box {
   padding: 80px;
@@ -37,6 +38,7 @@
   flex-shrink: 0;
   gap: 50px;
   justify-content: start;
+  will-change: transform;
 }
 .work-flex .work-box:nth-child(even) {
   flex-direction: column-reverse;
