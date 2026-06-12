@@ -12,8 +12,9 @@ const Work = () => {
 
     function setTranslateX() {
       const flex = document.querySelector(".work-flex") as HTMLElement;
-      if (!flex) return;
-      translateX = flex.scrollWidth - window.innerWidth;
+      const container = document.querySelector(".work-container") as HTMLElement;
+      if (!flex || !container) return;
+      translateX = flex.scrollWidth - container.clientWidth;
     }
 
     const refreshAll = () => {
