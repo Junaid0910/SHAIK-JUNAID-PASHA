@@ -152,11 +152,12 @@ export function setAllTimeline() {
       anticipatePin: 1,
     },
   });
+  const boxes = gsap.utils.toArray(".career-info-box");
   careerTimeline
     .fromTo(
       ".career-timeline",
-      { maxHeight: "10%" },
-      { maxHeight: "100%", duration: 0.5 },
+      { maxHeight: "0%" },
+      { maxHeight: "100%", duration: 1.0 },
       0
     )
 
@@ -167,10 +168,22 @@ export function setAllTimeline() {
       0
     )
     .fromTo(
-      ".career-info-box",
-      { opacity: 0 },
-      { opacity: 1, stagger: 0.1, duration: 0.5 },
-      0
+      boxes[0] as HTMLElement,
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 0.2 },
+      0.15
+    )
+    .fromTo(
+      boxes[1] as HTMLElement,
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 0.2 },
+      0.5
+    )
+    .fromTo(
+      boxes[2] as HTMLElement,
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 0.2 },
+      0.85
     )
     .fromTo(
       ".career-dot",

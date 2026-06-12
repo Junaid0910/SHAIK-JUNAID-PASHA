@@ -191,12 +191,12 @@ body {
   width: 55px;
   height: 55px;
   object-fit: contain;
-  filter: grayscale(0.8) brightness(1.2);
+  filter: drop-shadow(0 2px 8px rgba(255, 255, 255, 0.15)) brightness(1.1);
   transition: all 0.3s ease;
 }
 
 .tech-box:hover img {
-  filter: grayscale(0) brightness(1);
+  filter: drop-shadow(0 4px 12px rgba(255, 255, 255, 0.35)) brightness(1.25);
   transform: scale(1.1);
 }
 

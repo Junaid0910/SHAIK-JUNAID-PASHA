@@ -11,17 +11,9 @@ const Work = () => {
     let translateX: number = 0;
 
     function setTranslateX() {
-      const boxes = document.getElementsByClassName("work-box");
-      if (boxes.length === 0) return;
-      const container = document.querySelector(".work-container");
-      if (!container) return;
-
-      const rectLeft = container.getBoundingClientRect().left;
-      const rect = boxes[0].getBoundingClientRect();
-      const parentWidth = boxes[0].parentElement!.getBoundingClientRect().width;
-      let padding: number =
-        parseInt(window.getComputedStyle(boxes[0]).padding) / 2;
-      translateX = rect.width * boxes.length - (rectLeft + parentWidth) + padding;
+      const flex = document.querySelector(".work-flex") as HTMLElement;
+      if (!flex) return;
+      translateX = flex.scrollWidth - window.innerWidth;
     }
 
     const refreshAll = () => {
@@ -37,7 +29,7 @@ const Work = () => {
         trigger: ".work-section",
         start: "top top",
         end: () => `+=${translateX}`,
-        scrub: 0.5,
+        scrub: 1,
         pin: true,
         id: "work",
         invalidateOnRefresh: true,
