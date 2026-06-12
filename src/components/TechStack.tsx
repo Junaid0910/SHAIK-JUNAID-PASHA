@@ -1,21 +1,20 @@
 import "./styles/style.css";
 
 const skills = [
-  { name: "Python", icon: "/images/placeholder.webp" },
-  { name: "SQL", icon: "/images/mysql.webp" },
+  { name: "Python", icon: "/images/python.png" },
+  { name: "SQL", icon: "/images/sql.png" },
   { name: "React", icon: "/images/react2.webp" },
   { name: "Next.js", icon: "/images/next2.webp" },
   { name: "Node.js", icon: "/images/node2.webp" },
-  { name: "TypeScript", icon: "/images/typescript.webp" },
   { name: "JavaScript", icon: "/images/javascript.webp" },
   { name: "MongoDB", icon: "/images/mongo.webp" },
   { name: "MySQL", icon: "/images/mysql.webp" },
   { name: "Express", icon: "/images/express.webp" },
-  { name: "Pandas", icon: "/images/placeholder.webp" },
-  { name: "NumPy", icon: "/images/placeholder.webp" },
-  { name: "Power BI", icon: "/images/placeholder.webp" },
-  { name: "Tableau", icon: "/images/placeholder.webp" },
-  { name: "Excel", icon: "/images/placeholder.webp" },
+  { name: "Pandas", icon: "/images/pandas.png" },
+  { name: "NumPy", icon: "/images/numpy.png" },
+  { name: "Power BI", icon: "/images/powerbi.png" },
+  { name: "Tableau", icon: "/images/tableau.png" },
+  { name: "Excel", icon: "/images/excel.png" },
 ];
 
 const TechStack = () => {
