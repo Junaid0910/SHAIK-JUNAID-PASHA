@@ -8,28 +8,19 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const Work = () => {
   useGSAP(() => {
-    let translateX: number = 0;
-
-    function setTranslateX() {
-      const flex = document.querySelector(".work-flex") as HTMLElement;
-      const container = document.querySelector(".work-container") as HTMLElement;
-      if (!flex || !container) return;
-      translateX = flex.scrollWidth - container.clientWidth;
-    }
-
-    const refreshAll = () => {
-      setTranslateX();
-      ScrollTrigger.refresh();
-    };
-
-    refreshAll();
-    window.addEventListener("resize", refreshAll);
-
     let timeline = gsap.timeline({
       scrollTrigger: {
         trigger: ".work-section",
         start: "top top",
-        end: () => `+=${translateX}`,
+        end: () => {
+          const boxes = document.querySelectorAll(".work-box");
+          const container = document.querySelector(".work-container");
+          if (boxes.length === 0 || !container) return "+=0";
+          const boxWidth = (boxes[0] as HTMLElement).offsetWidth;
+          const containerWidth = container.clientWidth;
+          const scrollDistance = (boxWidth * boxes.length) - containerWidth + 80;
+          return `+=${Math.max(0, scrollDistance)}`;
+        },
         scrub: 1,
         pin: true,
         id: "work",
@@ -39,13 +30,20 @@ const Work = () => {
     });
 
     timeline.to(".work-flex", {
-      x: () => -translateX,
+      x: () => {
+        const boxes = document.querySelectorAll(".work-box");
+        const container = document.querySelector(".work-container");
+        if (boxes.length === 0 || !container) return 0;
+        const boxWidth = (boxes[0] as HTMLElement).offsetWidth;
+        const containerWidth = container.clientWidth;
+        const scrollDistance = (boxWidth * boxes.length) - containerWidth + 80;
+        return -Math.max(0, scrollDistance);
+      },
       ease: "none",
       force3D: true,
     });
 
     return () => {
-      window.removeEventListener("resize", refreshAll);
       timeline.kill();
       ScrollTrigger.getById("work")?.kill();
     };
