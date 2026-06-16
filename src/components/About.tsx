@@ -6,7 +6,7 @@ const About = () => {
       <div className="about-me">
         <h3 className="title">About Me</h3>
         <p className="para">
-          Motivated Computer Science (Data Science) undergraduate seeking an internship or entry-level Data Analytics role to apply skills in data analysis, visualization, SQL, and Python for transforming data into actionable insights and supporting data-driven decision making.
+          I am Shaik Junaid Pasha (also known as Shaik Junaid or Junaid Pasha), a motivated Computer Science (Data Science) undergraduate seeking an internship or entry-level Data Analytics role. I specialize in applying my skills in data analysis, visualization, SQL, and Python to transform data into actionable insights and support data-driven decision-making.
         </p>
       </div>
     </div>
