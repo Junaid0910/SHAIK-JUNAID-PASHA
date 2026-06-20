@@ -71,10 +71,10 @@ const Work = () => {
               link: "https://github.com/Junaid0910/Amazon-Sales-analysis-Dashboard",
             },
             {
-              name: "Voice-to-Text Web Application",
+              name: "AuDoc",
               category: "Web App",
               tools: "Speech Input, Document Gen",
-              image: "/images/voice2text.PNG",
+              image: "/images/audoc.png",
               link: "https://voice2textdoc.vercel.app/",
             },
           ].map((project, index) => (
