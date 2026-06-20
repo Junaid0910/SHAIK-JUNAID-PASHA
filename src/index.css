@@ -200,6 +200,25 @@ body {
   transform: scale(1.1);
 }
 
+/* Specific filters for dark logos to improve contrast on dark background */
+.tech-box img[src*="nextjs"],
+.tech-box img[src*="express"] {
+  filter: invert(1) brightness(1.8) drop-shadow(0 0 8px rgba(255, 255, 255, 0.5)) !important;
+}
+
+.tech-box:hover img[src*="nextjs"],
+.tech-box:hover img[src*="express"] {
+  filter: invert(1) brightness(2) drop-shadow(0 0 12px rgba(255, 255, 255, 0.8)) !important;
+}
+
+.tech-box img[src*="nodejs"] {
+  filter: brightness(1.4) drop-shadow(0 0 8px rgba(131, 205, 41, 0.4)) !important;
+}
+
+.tech-box:hover img[src*="nodejs"] {
+  filter: brightness(1.6) drop-shadow(0 0 12px rgba(131, 205, 41, 0.7)) !important;
+}
+
 .tech-box span {
   font-size: 15px;
   font-weight: 600;
