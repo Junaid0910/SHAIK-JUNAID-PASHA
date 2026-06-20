@@ -57,11 +57,18 @@ const Work = () => {
         <div className="work-flex">
           {[
             {
-              name: "Shopping Trends Data Analysis",
-              category: "Data Analysis",
-              tools: "Python, Pandas, NumPy",
-              image: "/images/shopping trends data analysis.jfif",
-              link: "https://github.com/Junaid0910/shopping-trend-analysis",
+              name: "Worko",
+              category: "Full Stack Development",
+              tools: "React, Express, Node.js, MongoDB",
+              image: "/images/worko.png",
+              link: "https://github.com/Junaid0910/Worko",
+            },
+            {
+              name: "AuDoc",
+              category: "Web App",
+              tools: "Speech Input, Document Gen",
+              image: "/images/audoc.png",
+              link: "https://voice2textdoc.vercel.app/",
             },
             {
               name: "Sales Performance Dashboard",
@@ -71,11 +78,11 @@ const Work = () => {
               link: "https://github.com/Junaid0910/Amazon-Sales-analysis-Dashboard",
             },
             {
-              name: "AuDoc",
-              category: "Web App",
-              tools: "Speech Input, Document Gen",
-              image: "/images/audoc.png",
-              link: "https://voice2textdoc.vercel.app/",
+              name: "Shopping Trends Data Analysis",
+              category: "Data Analysis",
+              tools: "Python, Pandas, NumPy",
+              image: "/images/shopping trends data analysis.jfif",
+              link: "https://github.com/Junaid0910/shopping-trend-analysis",
             },
           ].map((project, index) => (
             <div className="work-box" key={index}>
